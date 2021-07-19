@@ -1,39 +1,31 @@
-## Введение в Sequelize
+## Introduction to Sequelize
 
-Установите sequlize и sequlize-cli. Вам предстоит выполнить несколько небольших заданий, чтобы научиться работать с моделями в Sequelize. Вы будете работать с пользователями, продуктами и заказами. Это может быть рабочая модель сайта онлайн-покупок, заказов еды на дом и тд.
+Install sequlize and sequlize-cli. You will complete a few small tasks to familiarize yourself with Sequelize models. You will need to incorporate users, products, and orders, meaning that you can create a website for online shopping, home food ordering, etc.
 
 ### Releases
 
+### Release 0. Design
+- Connect your database.
+- Create 2 models using sequlize-cli: User and Product.
+- Using Sequelize's documentation, explore various possible data types and give each model 3-7 fields for realism.
 
-### Release 0. Проектирование
-
-- Настройте подключение к БД.
-- С помощью sequlize-cli создайте 2 модели: User, Product.
-- Изучите возможные типы данных в документации Sequelize, затем добавьте каждой модели по 3-7 полей для большей реалистичности.
-
-
-### Release 1. Связь, данные
-
-- Свяжите продукты и пользователей. Пока что мы добавим связь, отвечающую за любимые продукты пользователей (Например: `Пользователь Петя любит Бананы`). Надо добавить пользователю поле favouriteProducts. У каждого пользователя может быть только один любимый продукт.
-- Добавьте несколько записей в БД.
-
+### Release 1. Communication, data
+- Connect the Products and Users. For now, we will connect the users and their favorite products (For example: `User Peter likes Bananas`). We need to give users a favouriteProducts field (each user can have only one favorite product).
+- Populate your database.
 
 ### Release 2. Order
 
-- Добавьте модель Order, которая опять же будет связкой между User и Product. Order может содержать часть данных из User и часть из Product, либо просто ссылаться на них.
-- Добавьте несколько заказов (записей Order).
+- Create an Order model, which will also connect the Users and Products. Order can have data parts from both User and Product, or simply refer to both.
+- Create some Orders.
 
+### Release 3. Requests
 
-### Release 3. Запросы
+- Find all orders.
+- Find specific user's order.
+- Experiment with other queries. You can use various [methods and properties](https://sequelize.org/master/manual/model-querying-basics.html). How are "raw" queries different from model queries?
+- Now clear your database.
+- Don't forget to disconnect the database.
 
-- Найдите все заказы.
-- Найдите заказы определенного пользователя.
-- Поэкспериментируйте с другими запросами. Вы можете использовать различные [методы и свойства](https://sequelize.org/master/manual/model-querying-basics.html). Чем отличаются "сырые" запросы от запросов с использованием моделей? 
-- Теперь очистите свою базу.
-- Не забудьте закрыть соединение с БД.
+## Conclusion
 
-
-## Заключение
-
-Данный скрипт похож на работу с тестовой БД. Создается новая БД, наполняется данными, тестируем нужные функции, а затем подчищаем БД. Это принцип, по которому в мире реальной разработки работают с БД для тестирования.
-
+This code resembles test database work: creating a database, filling with data, testing its necessary functions, and clearing it. Real developers follow this principle to asses databases. 
